@@ -1,3 +1,10 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background: linear-gradient(135deg, #d8f0f8, #ffe2d8); /* soft blue to peach */
+  }
+
 /* General Header Styling */
 header {
     background-color: #fff;
@@ -70,4 +77,94 @@ header {
   .nav-links li a:hover {
     color: coral;
   }
+
+  /* Root theme colors */
+:root {
+    --light-blue: #b3e5fc;
+    --coral: #ff8a65;
+    --peach: #ffe0b2;
+    --dark-text: #2e2e2e;
+    --soft-white: #fdfdfd;
+  }
+  
+  /* HERO SECTION STYLING */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 1.5rem 6vh;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-blue), var(--peach));
+    color: var(--dark-text);
+    min-height: 80vh;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Flexible size */
+    font-weight: bold;
+    color: var(--coral);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    color: #333;
+  }
+  
+  .hero-verse {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 1.8rem;
+  }
+  
+  .verse-ref {
+    font-weight: 600;
+    color: #ff6e52;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: var(--coral);
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff7043;
+    transform: translateY(-2px);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .hero-content {
+      padding: 2rem 1.2rem;
+    }
+  }
+  
   
