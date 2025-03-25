@@ -1,2 +1,12 @@
 # The Journey
-💛 A digital space created to share the message of Jesus in a clear, gentle way — guiding seekers and new believers through the Gospel and into their first steps of faith. Built for evangelism and discipleship, with love and simplicity at its core.
+
+A simple web app designed to share the Gospel and help new believers take their first steps in faith.
+
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+- JSON Server (with local db.json)
+
+## Mission
+Evangelism meets discipleship — designed for seekers who want to understand the Gospel and take meaningful next steps.
