@@ -35,21 +35,21 @@ header {
     position: relative;
   }
   
-  .brand-text h1::after {
-    content: ".";
-    color: coral;
-    font-size: 2.5rem;
-    position: absolute;
-    right: -12px;
-    top: -5px;
-  }
-  
   .tagline {
     margin: 0;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1rem;
+    color: coral;
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  .subtagline {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #555;
     font-style: italic;
   }
+  
   
   /* Nav List Styling */
   .nav-links {
