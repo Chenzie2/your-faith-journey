@@ -1,0 +1,68 @@
+/*Header*/
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #1f1f1f;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #fefefe;
+    padding: 2rem 1.5rem;
+    border-bottom: 2px solid #eaeaea;
+    text-align: center;
+  }
+  
+  /* Logo + App Name */
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .logo h1 {
+    color: #195bb6; /* Primary Blue */
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Tagline */
+  .tagline {
+    font-size: 1.2rem;
+    color: #f2695c; /* Soft Coral */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #5f5f5f;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #195bb6; /* Hover to primary blue */
+  }
+  
