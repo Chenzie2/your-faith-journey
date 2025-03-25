@@ -1,50 +1,73 @@
-/* Header container */
-.header-container {
+/* General Header Styling */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
   }
   
-  /* Logo group */
-  .logo {
+  /* Branding: logo + text */
+  .branding {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 15px;
   }
   
-  /* Make the image small and circular */
-  .logo img {
+  .logo {
     width: 60px;
     height: 60px;
-    object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  /* Branding text */
   .brand-text h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
     margin: 0;
-    font-size: 1.4rem;
+    position: relative;
   }
   
-  .brand-text p {
+  .brand-text h1::after {
+    content: ".";
+    color: coral;
+    font-size: 2.5rem;
+    position: absolute;
+    right: -12px;
+    top: -5px;
+  }
+  
+  .tagline {
     margin: 0;
     font-size: 0.9rem;
-    color: #555;
+    color: #666;
+    font-style: italic;
   }
   
-  /* Nav links horizontally */
-  .nav-links a {
-    margin-left: 1.5rem;
+  /* Nav List Styling */
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: color 0.3s ease;
   }
   
-  .nav-links a:hover {
-    color: #0077cc;
+  .nav-links li a:hover {
+    color: coral;
   }
   
