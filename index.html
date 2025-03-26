@@ -1,121 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE JOURNEY APP</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./images/JforJesus.webp" type="image/webp">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Journey</title>
 </head>
 <body>
- <!-- Top Bar (Header) -->
- <header class="top-bar">
-    <div class="branding">
-        <img src="./images/steps of faith.jpg" alt="The Journey Logo" class="logo" />
-        <div class="brand-text">
-            <h1 class="app-title">The Journey</h1>
-            <p class="tagline">Encounter Jesus. Take the Next Step</p>
-        </div>
+
+  <!-- 🧭 Navbar -->
+  <nav>
+    <div class="logo">The Journey</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gospel">The Gospel</a></li>
+      <li><a href="#whats-next">What’s Next?</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Home Section -->
+  <section id="home" class="home">
+    <div class="text">
+      <h1>The Journey</h1>
+      <h2>Encounter Jesus. Embrace the Mission.</h2>
+      <p>
+        Everyone is on a journey. Some are searching, some are struggling, and some are just beginning to ask deeper questions.
+        <br/><br/>
+        Wherever you are, you're not alone—and this is just the beginning.
+      </p>
+      <a href="#gospel" class="btn">Start the Journey</a>
     </div>
-</header>
+    <div class="image">
+      <img src="path.jpg" alt="A warm inviting journey image">
+    </div>
+  </section>
 
-<div class="layout">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">THE GOSPEL</a></li>
-                <li><a href="#">WHAT'S NEXT?</a></li>
-                <li><a href="#">BEAR WITNESS</a></li>
-                <li><a href="#">CONNECT</a></li>
-            </ul>
-        </nav>
-    </aside>
+  <!-- ✝️ Gospel Section -->
+  <section id="gospel">
+    <h2>The Good News</h2>
+    <p>
+      The world is broken, but there’s hope. God didn’t leave us in the dark.
+      Out of love, He sent Jesus—fully God and fully human—to rescue us.
+    </p>
+    <p>
+      Jesus lived the perfect life we couldn't, died to take our place,
+      and rose again to bring new life. Through Him, we can be forgiven,
+      restored, and made new.
+    </p>
+    <!-- Optional button -->
+    <!-- <a href="#whats-next" class="btn">Learn More</a> -->
+  </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <div class="container">   
-        <section class="hero">
-          <div class="hero-content">
-            <h1 class="hero-title">Your Journey starts Here</h1>
-            <p class="hero-subtitle">From Darkness into the Light</p>
-            <p class="hero-verse">"...that they may turn from darkness to light and from the power of Satan to God..." 
-              <span class="verse-ref">— Acts 26:18</span></p>
-            <a href="#gospel" class="cta-button">Explore the Gospel</a>
-          </div>
-        </section>
-        <section id="gospel" class="gospel-section">
-          <div class="gospel-header">
-            <h2 class="gospel-title">Here's the Good News!</h2>
-            <p class="gospel-subheading">Fall → Separation → Sacrifice → Love → Response → New Life</p>
-          </div>
-          <div class="gospel-message">
-            <p>
-              This is the Gospel, the breathtaking news! Even though we were broken, sinful, and spiritually dead, 
-              God did not leave us in the dark. Out of love, He sent His Son Jesus, fully God and fully man,
-              to live the life we couldn’t live and die the death we deserved. On the cross, Jesus bore our sin, 
-              shame, and judgment, offering us forgiveness and freedom. He rose from the dead, defeating sin and 
-              death once and for all. Jesus became sin; that in Him we may be made the righteousness of God.
-            </p>
-            <p>
-              Now, through Jesus, we are invited not just to be forgiven, but to be made new, adopted into God's 
-              family, filled with His Spirit, and sent into the world with a purpose. This isn’t about religion or 
-              trying harder, it’s about grace and the relentless love of God. A restored relationship. A new life. Forever.
-            </p>
-          </div>
-          <!-- Gospel Flow / Verse Cards -->
-          <div class="gospel-flow">
-              <div class="gospel-card">
-                  <div class="gospel-icon">💔</div>
-                  <h3 class="flow-title">Fall</h3>
-                  <p class="verse">“For all have sinned and fall short of the glory of God.”</p>
-                  <span class="verse-ref">— Romans 3:23</span>
-              </div>
-              <div class="arrow">➡️</div>
-              <div class="gospel-card">
-                  <div class="gospel-icon">🧱</div>
-                  <h3 class="flow-title">Separation</h3>
-                  <p class="verse">“The wages of sin is death, but the gift of God is eternal life...”</p>
-                  <span class="verse-ref">— Romans 6:23</span>
-              </div>
-              <div class="arrow">➡️</div>
-              <div class="gospel-card">
-                  <div class="gospel-icon">✝️</div>
-                  <h3 class="flow-title">Sacrifice</h3>
-                  <p class="verse">“He was pierced for our transgressions, crushed for our sins...”</p>
-                  <span class="verse-ref">— Isaiah 53:5</span>
-              </div>
-              <div class="arrow">➡️</div>
-              <div class="gospel-card">
-                  <div class="gospel-icon">❤️</div>
-                  <h3 class="flow-title">Love</h3>
-                  <p class="verse">“For God so loved the world that He gave His only Son...”</p>
-                  <span class="verse-ref">— John 3:16</span>
-              </div>
-              <div class="arrow">➡️</div>
-              <div class="gospel-card">
-                  <div class="gospel-icon">🗣️</div>
-                  <h3 class="flow-title">Response</h3>
-                  <p class="verse">“If you confess with your mouth ‘Jesus is Lord’...”</p>
-                  <span class="verse-ref">— Romans 10:9</span>
-              </div>
-              <div class="arrow">➡️</div>
-              <div class="gospel-card">
-                  <div class="gospel-icon">🌅</div>
-                  <h3 class="flow-title">New Life</h3>
-                  <p class="verse">“If anyone is in Christ, he is a new creation...”</p>
-                  <span class="verse-ref">— 2 Corinthians 5:17</span>
-              </div>
-          </div>
-          <div class="gospel-cta">
-            <p class="cta-text">Do you believe this message? Jesus is calling you into a new life. Say yes today.</p>
-            <a href="#next-steps" class="cta-button">I Want to Follow Jesus</a>
-          </div>
-        </section>
+  <!-- 🛤️ What’s Next Section -->
+  <section id="whats-next">
+    <h2>🛤️ What’s Next?</h2>
+    <p>
+      Congratulations on receiving eternal life! You’ve entered the narrow path—a journey with Jesus that leads to real life.
+      This path isn’t about rules or religion, but a relationship. Let’s walk it together, step by step:
+    </p>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <h3 class="accordion-title">🙏 Prayer</h3>
+        <div class="accordion-content">
+          <p>Talk to God daily. Be real. He’s listening—always.</p>
+          <blockquote>“Pray without ceasing...” — 1 Thessalonians 5:17</blockquote>
+        </div>
       </div>
-    </main>
-  </div> 
-  
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">🌊 Baptism in Water</h3>
+        <div class="accordion-content">
+          <p>Go public with your faith. It shows the world what Jesus did for you.</p>
+          <blockquote>“Repent and be baptized...” — Acts 2:38</blockquote>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">🔥 Baptism in the Holy Spirit</h3>
+        <div class="accordion-content">
+          <p>Ask God to fill you with His power and presence.</p>
+          <blockquote>“You will receive power...” — Acts 1:8</blockquote>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">📖 God’s Word</h3>
+        <div class="accordion-content">
+          <p>Feed your faith daily through Scripture. Start with the Gospels.</p>
+          <blockquote>“Man shall not live by bread alone...” — Matt. 4:4</blockquote>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">🌱 Grow in Community</h3>
+        <div class="accordion-content">
+          <p>We grow stronger together. Find fellowship, not isolation.</p>
+          <blockquote>“Crave pure spiritual milk...” — 1 Peter 2:2</blockquote>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">❤️ Love God First</h3>
+        <div class="accordion-content">
+          <p>Put Jesus above everything. Love leads to real transformation.</p>
+          <blockquote>“Love the Lord your God...” — Matt. 22:37</blockquote>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-title">✨ Personal Revelation</h3>
+        <div class="accordion-content">
+          <p>Don’t just know about Jesus—get to know Him for yourself.</p>
+          <blockquote>“That I may know Him...” — Phil. 3:10</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💬 Connect Section -->
+  <section id="connect">
+    <h2>Let’s Connect</h2>
+    <p>
+      Got questions? Want to talk or pray with someone?<br/>
+      We’d love to hear from you—just drop us a message below.
+    </p>
+
+    <!-- Simple contact form -->
+    <form>
+      <label for="name">Name:</label><br/>
+      <input type="text" id="name" name="name" /><br/><br/>
+
+      <label for="email">Email:</label><br/>
+      <input type="email" id="email" name="email" /><br/><br/>
+
+      <label for="message">Message:</label><br/>
+      <textarea id="message" name="message" rows="5"></textarea><br/><br/>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
 </body>
 </html>
