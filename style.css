@@ -1,28 +1,102 @@
-/* ========== GLOBAL STYLES ========== */
+/*set the page theme gradient*/
 :root {
-    --light-blue: #b3e5fc;
-    --coral: #ff8a65;
-    --peach: #ffe0b2;
-    --dark-text: #2e2e2e;
-    --soft-white: #fdfdfd;
+    --light-blue: #92cfeb;
+    --coral: #ff8965;
+    --peach: #f7d4a1;
+    --dark-text: #131313;
+    --soft-white: #f8ecec;
   }
   
   body {
     margin: 0;
     font-family: 'Lora', serif;
-    background: linear-gradient(135deg, #d8f0f8, #ffe2d8); 
+    font-size: large;
+    background: linear-gradient(135deg, #adeaff, #fcbca7);
+  }
+  
+  /* Sidebar */
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f1ee;
+    padding: 30px 20px;
+    border-right: 1px solid #ffb3b3;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
+  
+  .branding {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .brand-text h1 {
+    font-size: 1.8rem;
+    margin: 0.2rem 0;
+    color: #333;
+  }
+  
+  .tagline {
+    margin: 0;
+    font-size: 1.2rem;
+    color: rgb(252, 119, 71);
+    font-style: italic;
+  }
+  
+  /* Nav styles */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: rgb(253, 144, 101);
+  }
+  
+  /* Content area next to sidebar */
+  .main-content {
+    flex: 1;
+    padding: 40px;
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
   
-  /* ========== HEADER STYLES ========== */
+  /* Header */
   header {
-    background-color: #fff;
+    background-color: #f3aeae;
     padding: 20px 40px;
     border-bottom: 1px solid #eee;
   }
@@ -49,7 +123,7 @@
   }
   
   .brand-text h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #333;
     margin: 0;
@@ -90,7 +164,7 @@
   }
   
   
-  /* ========== HERO SECTION ========== */
+  /* Hero */
   .hero {
     display: flex;
     align-items: center;
@@ -155,7 +229,7 @@
   }
   
   
-  /* ========== GOSPEL SECTION ========== */
+  /* The Gospel */
   .gospel-section {
     padding: 4rem 1.5rem;
     text-align: center;
@@ -253,7 +327,7 @@
   }
   
   
-  /* ========== MISC ========== */
+  /* Arrow emoji */
   .arrow {
     font-size: 24px;
     margin: 0 10px;
@@ -261,18 +335,5 @@
   }
   
   
-  /* ========== RESPONSIVE ========== */
-  @media (max-width: 600px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-  
-    .hero-subtitle {
-      font-size: 1.2rem;
-    }
-  
-    .hero-content {
-      padding: 2rem 1.2rem;
-    }
-  }
+
   

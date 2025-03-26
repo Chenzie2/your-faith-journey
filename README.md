@@ -9,4 +9,4 @@ A simple web app designed to share the Gospel and help new believers take their 
 - JSON Server (with local db.json)
 
 ## Mission
-Evangelism meets discipleship — designed for seekers who want to understand the Gospel and take meaningful next steps.
+Evangelism meets discipleship. This app designed for seekers who want to understand the Gospel and take meaningful next steps.
