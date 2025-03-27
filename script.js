@@ -38,3 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
             content.style.display = content.style.display === "block" ? "none" : "block";
           });
         });
+//Switch to dark mode
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+  });
+  
