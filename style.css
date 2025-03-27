@@ -314,9 +314,11 @@ blockquote {
 }
 
 .accordion-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
   background-color: #1a2332;
-  padding: 1rem 1.2rem;
+  padding: 0 1.2rem; /* Add horizontal padding only */
   border-left: 4px solid var(--primary-color);
   border-radius: 0.6rem;
   margin-top: 0.5rem;

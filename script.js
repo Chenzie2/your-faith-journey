@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
     typeText();
   
+    // ====== Load Theme Preference ======
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-theme");
+    }
+  
     // ====== Accordion Fetch & Render ======
     fetch("http://localhost:3000/whatsNext")
       .then(res => res.json())
@@ -25,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
           accordionItem.className = "accordion-item";
   
           accordionItem.innerHTML = `
-            <h3 class="accordion-title">${item.title}</h3>
+            <h3 class="accordion-title" role="button" tabindex="0" aria-expanded="false">
+              ${item.title}
+            </h3>
             <div class="accordion-content">
               <p>${item.content}</p>
               <blockquote>${item.verse} <br><small>${item.reference}</small></blockquote>
@@ -38,23 +45,39 @@ document.addEventListener("DOMContentLoaded", () => {
         // Accordion Toggle Logic
         const titles = document.querySelectorAll(".accordion-title");
         titles.forEach(title => {
-          title.addEventListener("click", () => {
-            const content = title.nextElementSibling;
+          const content = title.nextElementSibling;
   
-            // Toggle visibility
-            const isVisible = content.style.display === "block";
-            content.style.display = isVisible ? "none" : "block";
-  
-            // Optionally toggle a class (for animation/CSS control)
-            title.parentElement.classList.toggle("active");
+          title.addEventListener("click", () => toggleAccordion(title, content));
+          title.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleAccordion(title, content);
+            }
           });
         });
+  
+        function toggleAccordion(title, content) {
+          const expanded = title.getAttribute("aria-expanded") === "true";
+  
+          title.setAttribute("aria-expanded", !expanded);
+          title.parentElement.classList.toggle("active", !expanded);
+  
+          content.style.maxHeight = !expanded ? content.scrollHeight + "px" : null;
+        }
       })
-      .catch(err => console.error("Failed to load accordion content:", err));
+      .catch(err => {
+        console.error("Failed to load accordion content:", err);
+        const container = document.getElementById("accordion-container");
+        container.innerHTML = `
+          <p style="color: var(--accent-pink);">Oops! Couldn't load content. Try refreshing.</p>
+        `;
+      });
   
     // ====== Theme Toggle ======
     document.getElementById("theme-toggle").addEventListener("click", () => {
       document.body.classList.toggle("light-theme");
+      const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+      localStorage.setItem("theme", theme);
     });
   
     // ====== Scroll Progress Bar ======
