@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ====== Typing Animation ======
+    //  Typing Animation 
     const typingHeading = document.getElementById("typing-heading");
-    const textToType = "Encounter Jesus; Embrace the Mission";
+    const textToType = "From Darkness to Light";
     let index = 0;
   
     function typeText() {
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
     typeText();
   
-    // ====== Load Theme Preference ======
+    // Theme Preference
     if (localStorage.getItem("theme") === "light") {
       document.body.classList.add("light-theme");
     }
   
-    // ====== Accordion Fetch & Render ======
+    // Accordion
     fetch("http://localhost:3000/whatsNext")
       .then(res => res.json())
       .then(data => {
@@ -73,14 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       });
   
-    // ====== Theme Toggle ======
+    //Theme Toggle
     document.getElementById("theme-toggle").addEventListener("click", () => {
       document.body.classList.toggle("light-theme");
       const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
       localStorage.setItem("theme", theme);
     });
   
-    // ====== Scroll Progress Bar ======
+    // Scroll Progress Bar 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
       const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -88,4 +88,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("progress-bar").style.width = `${scrolled}%`;
     });
   });
-  
+
+//Gospel Cards
+  const cards = document.querySelectorAll('.card');
+
+const reveal = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal');
+    }
+  });
+});
+
+cards.forEach(card => reveal.observe(card));
