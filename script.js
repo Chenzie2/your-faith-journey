@@ -42,4 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.classList.toggle("light-theme");
   });
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrolled = (scrollY / docHeight) * 100;
+    document.getElementById("progress-bar").style.width = `${scrolled}%`;
+  });
+  
   
