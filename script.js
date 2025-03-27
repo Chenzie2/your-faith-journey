@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // ====== Typing Animation ======
+    const typingHeading = document.getElementById("typing-heading");
+    const textToType = "Encounter Jesus; Embrace the Mission";
+    let index = 0;
+  
+    function typeText() {
+      if (index < textToType.length) {
+        typingHeading.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeText, 80); // typing speed
+      }
+    }
+  
+    typeText();
+  
+    // ====== Accordion Fetch & Render ======
     fetch("http://localhost:3000/whatsNext")
       .then(res => res.json())
       .then(data => {
@@ -19,49 +35,34 @@ document.addEventListener("DOMContentLoaded", () => {
           container.appendChild(accordionItem);
         });
   
-        // Accordion logic
-        const items = document.querySelectorAll(".accordion-item");
-        items.forEach(item => {
-          const title = item.querySelector(".accordion-title");
-          title.addEventListener("click", () => {
-            item.classList.toggle("active");
-          });
-        });
-      });
-  });
-  
-   // Add toggle functionality
+        // Accordion Toggle Logic
         const titles = document.querySelectorAll(".accordion-title");
         titles.forEach(title => {
           title.addEventListener("click", () => {
             const content = title.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
+  
+            // Toggle visibility
+            const isVisible = content.style.display === "block";
+            content.style.display = isVisible ? "none" : "block";
+  
+            // Optionally toggle a class (for animation/CSS control)
+            title.parentElement.classList.toggle("active");
           });
         });
-//Switch to dark mode
-document.getElementById("theme-toggle").addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
+      })
+      .catch(err => console.error("Failed to load accordion content:", err));
+  
+    // ====== Theme Toggle ======
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+    });
+  
+    // ====== Scroll Progress Bar ======
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (scrollY / docHeight) * 100;
+      document.getElementById("progress-bar").style.width = `${scrolled}%`;
+    });
   });
-
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrolled = (scrollY / docHeight) * 100;
-    document.getElementById("progress-bar").style.width = `${scrolled}%`;
-  });
-  const typingHeading = document.getElementById("typing-heading");
-  const textToType = "Encounter Jesus; Embrace the Mission";
-  let index = 0;
-  
-  function typeText() {
-    if (index < textToType.length) {
-      typingHeading.textContent += textToType.charAt(index);
-      index++;
-      setTimeout(typeText, 80); // speed
-    }
-  }
-  
-  document.addEventListener("DOMContentLoaded", typeText);
-  
-  
   
