@@ -1,13 +1,13 @@
-//* ========== Base Theme ========== */
+/* ========== Base Theme ========== */
 :root {
-  --bg-dark: #0e1a2b;
-  --bg-section: #162a40;
-  --primary-blue: #3f82f7;
-  --accent-light: #7ab7ff;
-  --text-light: #e6f0ff;
-  --text-muted: #94a3b8;
-  --btn-bg: #3f82f7;
-  --btn-hover: #1e60d2;
+  --bg-dark: #0a192f;
+  --bg-section: #112240;
+  --primary-blue: #64ffda;
+  --accent-light: #7fffd4;
+  --text-light: #e6f1ff;
+  --text-muted: #8892b0;
+  --btn-bg: #64ffda;
+  --btn-hover: #52d9b8;
   --font-primary: 'Lora', serif;
   --font-secondary: 'Helvetica Neue', sans-serif;
 }
@@ -36,7 +36,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(9, 53, 95, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav .logo {
@@ -77,14 +77,14 @@ h2 {
   font-family: var(--font-primary);
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--accent-light);
+  color: var(--primary-blue);
 }
 
 h3.accordion-title {
   cursor: pointer;
   font-size: 1.4rem;
   margin: 1.2rem 0;
-  color: var(--primary-blue);
+  color: var(--accent-light);
 }
 
 p {
@@ -103,8 +103,8 @@ blockquote {
 /* ========== Home ========== */
 .home {
   background: linear-gradient(
-      rgba(14, 26, 43, 0.75),
-      rgba(14, 26, 43, 0.75)
+      rgba(10, 25, 47, 0.8),
+      rgba(10, 25, 47, 0.8)
     ),
     url('./images/thelight.jpg') no-repeat center center;
   background-size: cover;
@@ -122,7 +122,7 @@ blockquote {
   flex: 1 1 400px;
   max-width: 600px;
   margin: 0 auto;
-  color: rgb(81, 223, 233);
+  color: var(--accent-light);
 }
 
 .home .image {
@@ -136,22 +136,14 @@ blockquote {
   max-width: 450px;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 0 25px rgba(63, 130, 247, 0.3);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
 }
+
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 4rem 1.5rem;
-  }
-
-  .home .image {
-    margin-top: 2rem;
-  }
-
-  .home .image img {
-    max-width: 100%;
   }
 
   nav ul {
@@ -160,47 +152,53 @@ blockquote {
     padding: 1rem;
     display: none;
   }
-
-  nav .logo {
-    font-size: 1.4rem;
-  }
 }
+
+/* ========== Accordion ========== */
 #whats-next {
   padding: 5rem 2rem;
   background-color: var(--bg-section);
-  border-top: 1px solid #1f2c3d;
   text-align: left;
+}
+
+.accordion-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .accordion-title {
   cursor: pointer;
-  padding: 0.75rem 1rem;
-  background: rgba(63, 130, 247, 0.1);
-  border-radius: 8px;
-  transition: background 0.3s;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background: rgba(100, 255, 218, 0.1);
+  color: var(--primary-blue);
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
 }
 
 .accordion-title:hover {
-  background: rgba(63, 130, 247, 0.2);
+  background: rgba(100, 255, 218, 0.15);
 }
 
 .accordion-content {
-  display: none;
-  background-color: #12253a;
-  padding: 1rem 1.2rem;
-  border-left: 4px solid var(--primary-blue);
-  border-radius: 0.6rem;
-  margin-top: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  color: var(--text-light);
 }
 
-
-
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 1rem;
+}
 
 /* ========== Buttons ========== */
 .btn, .button-group a, button {
   display: inline-block;
   background-color: var(--btn-bg);
-  color: #fff;
+  color: #0a192f;
   padding: 0.75rem 1.7rem;
   margin: 0.5rem 0.5rem 1.2rem 0;
   border: none;
@@ -214,19 +212,6 @@ blockquote {
   background-color: var(--btn-hover);
   transform: translateY(-2px);
   cursor: pointer;
-}
-
-/* ========== Accordion ========== */
-.accordion-item {
-  margin-bottom: 2rem;
-}
-
-.accordion-content {
-  background-color: #12253a;
-  padding: 1rem 1.2rem;
-  border-radius: 0.6rem;
-  border-left: 4px solid var(--primary-blue);
-  transition: max-height 0.3s ease;
 }
 
 /* ========== Form ========== */
@@ -250,6 +235,3 @@ input:focus, textarea:focus {
   outline: 2px solid var(--primary-blue);
   background-color: #223850;
 }
-
-
-
