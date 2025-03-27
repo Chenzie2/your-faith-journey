@@ -405,6 +405,71 @@ blockquote {
   margin-top: 0.5rem;
   color: var(--text-color);
 }
+/* ========== Witness Section ========== */
+#witness {
+  background-color: var(--section-bg);
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.witness-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.witness-header i {
+  font-size: 1.75rem;
+  color: var(--accent-blue);
+}
+
+.witness-header h2 {
+  font-family: var(--font-primary);
+  font-size: 2.25rem;
+  color: var(--accent-gold);
+  margin: 0;
+}
+
+#witness p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 1.2rem;
+}
+
+.bible-verse {
+  font-style: italic;
+  color: var(--accent-pink);
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.verse-ref {
+  color: var(--accent-cyan);
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 
 /* ========== Form ========== */
 form {
