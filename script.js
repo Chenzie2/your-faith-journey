@@ -49,5 +49,19 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
     const scrolled = (scrollY / docHeight) * 100;
     document.getElementById("progress-bar").style.width = `${scrolled}%`;
   });
+  const typingHeading = document.getElementById("typing-heading");
+  const textToType = "Encounter Jesus; Embrace the Mission";
+  let index = 0;
+  
+  function typeText() {
+    if (index < textToType.length) {
+      typingHeading.textContent += textToType.charAt(index);
+      index++;
+      setTimeout(typeText, 80); // speed
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", typeText);
+  
   
   
