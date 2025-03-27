@@ -1,4 +1,4 @@
-/* ======= Default Theme (Midnight Devotion) ======= */
+/* Dark theme */
 :root {
   --bg-color: #0d1117;
   --section-bg: #161b22;
@@ -7,7 +7,7 @@
   --text-inverse: #1e293b;
 
   --primary-color: #3b82f6;
-  --accent-gold: #facc15;
+  --accent-beige: #f5e0b7;  /* Champagne Beige */
   --accent-pink: #f472b6;
   --accent-cyan: #22d3ee;
 
@@ -18,7 +18,7 @@
   --font-secondary: 'Helvetica Neue', sans-serif;
 }
 
-/* ======= Light Theme Overrides ======= */
+/*Light theme */
 body.light-theme {
   --bg-color: #f5f8fa;
   --section-bg: #eaf2f8;
@@ -26,13 +26,13 @@ body.light-theme {
   --text-muted: #5c6f8c;
   --text-inverse: #ffffff;
 
-  --primary-color: #2458dc;
-  --accent-gold: #eab308;
-  --accent-pink: #db2777;
+  --primary-color: #1e40af;         /* Deep navy */
+  --accent-beige: #f5e0b7;          /* Champagne Beige */
+  --accent-pink: #f472b6;
   --accent-cyan: #06b6d4;
 
-  --btn-bg: #2458dc;
-  --btn-hover: #183aa5;
+  --btn-bg: #1e40af;
+  --btn-hover: #1e3a8a;
 }
 
 /* ========== Base ========== */
@@ -235,7 +235,7 @@ h3.accordion-title {
   justify-content: center;
 }
 
-/* ========== Home Section ========== */
+/* Home */
 .home {
   background: linear-gradient(
       rgba(13, 17, 23, 0.85),
@@ -344,7 +344,7 @@ h3.accordion-title {
   }
 }
 
-/* ========== Paragraphs & Blockquotes ========== */
+/*Paragraphs & Blockquotes */
 p {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
@@ -358,7 +358,7 @@ blockquote {
   border-left: 4px solid var(--accent-gold);
 }
 
-/* ========== Buttons ========== */
+/*Buttons*/
 .btn, .button-group a, button {
   display: inline-block;
   background-color: var(--btn-bg);
@@ -378,43 +378,111 @@ blockquote {
   cursor: pointer;
 }
 
-/* ========== Accordion ========== */
-.accordion-item {
-  margin-bottom: 2rem;
-}
-
-.accordion-title {
-  padding: 0.75rem 1rem;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.accordion-title:hover {
-  background: rgba(59, 130, 246, 0.2);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background-color: #1a2332;
-  padding: 0 1.2rem; /* Add horizontal padding only */
-  border-left: 4px solid var(--primary-color);
-  border-radius: 0.6rem;
-  margin-top: 0.5rem;
-  color: var(--text-color);
-}
-/* ========== Witness Section ========== */
-#witness {
-  background-color: var(--section-bg);
+/* What’s Next Section */
+#whats-next {
   padding: 5rem 2rem;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
+  background-color: var(--section-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
 }
+
+#whats-next h2 {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+#whats-next p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 800px;
+  margin-bottom: 0.75rem;
+}
+
+/* Grid for Steps */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Card Styles */
+.next-step-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  height: 280px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Overlay Content */
+.next-step-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.next-step-card h3 {
+  font-size: 1.35rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Explore Button */
+.explore-all {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.explore-all .btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-cyan);
+  color: #111827;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(34, 211, 238, 0.3);
+}
+
+.explore-all .btn:hover {
+  background-color: #06b6d4; /* darker cyan */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+}
+
+/*Witness Section*/
+#witness {
+  background-color: var(--section-bg);
+  padding: 5rem 2rem; /* or reduce if you want tighter spacing */
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 
 .witness-header {
   display: flex;
@@ -458,8 +526,8 @@ blockquote {
   font-style: normal;
   font-weight: bold;
   display: block;
-  margin-top: 0.5rem;
-  text-align: right;
+  margin-top: 0.2rem;
+  text-align: left;
 }
 
 .button-group {
@@ -471,7 +539,7 @@ blockquote {
 }
 
 
-/* ========== Form ========== */
+/*Form */
 form {
   max-width: 600px;
   margin-top: 2rem;
