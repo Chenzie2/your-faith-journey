@@ -59,14 +59,6 @@ The themes are crafted to reflect different spiritual tones:
 
 Both themes are designed with accessibility and clarity in mind.
 
----
-
-### Live Preview:
-[View on GitHub Pages](https://your-username.github.io/your-faith-journey)
-
----
-
-## Copyright & License
+## Copyright
 
 © 2025 [Grace Zawadi]  
-Licensed under the [MIT License](LICENSE)
