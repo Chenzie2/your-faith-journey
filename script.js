@@ -33,29 +33,26 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("progress-bar").style.width = `${scrolled}%`;
     });
 
-    //whats next images
-  
     fetch("http://localhost:3000/whatsNext")
     .then(res => res.json())
     .then(data => {
       const cards = document.querySelectorAll(".next-step-card");
+  
       cards.forEach((card, i) => {
         const item = data[i];
         const overlay = card.querySelector(".overlay");
   
-        // Inject HTML content
-        overlay.innerHTML = `
-          <h3>${item.title}</h3>
-          <blockquote>${item.verse}</blockquote>
-          <small>${item.reference}</small>
-        `;
+        overlay.innerHTML = `<h3>${item.title}</h3>`;
   
-        // Optional: make entire card clickable
         card.addEventListener("click", () => {
-          window.location.href = `/next-steps#${item.title.replace(/\s+/g, '-').toLowerCase()}`;
+          const slug = item.title
+            .replace(/[^\w\s]/gi, '')
+            .trim()
+            .toLowerCase()
+            .replace(/\s+/g, '-');
+          window.location.href = `/next-steps#${slug}`;
         });
   
-        // Accessibility (optional)
         card.setAttribute("tabindex", "0");
         card.setAttribute("role", "link");
       });
@@ -66,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p style="color: var(--accent-pink);">Oops! Couldn't load content. Try refreshing or check your connection.</p>
       `;
     });
+  
 
     // Reveal animation (gospel cards)
     const cards = document.querySelectorAll('.card');

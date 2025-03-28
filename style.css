@@ -384,19 +384,18 @@ blockquote {
   background-color: var(--section-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  max-width: 1100px;
   margin: 0 auto;
   text-align: left;
 }
 
 #whats-next h2 {
   font-size: 2.5rem;
-  color: var(--accent-gold);
+  color:#06b6d4;
   margin-bottom: 1rem;
 }
 
 #whats-next p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: var(--text-color);
   max-width: 800px;
@@ -417,7 +416,7 @@ blockquote {
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
-  height: 280px;
+  height: 400px;
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -439,39 +438,37 @@ blockquote {
   flex-direction: column;
   justify-content: flex-end;
   text-align: left;
+  text-decoration:double ;
 }
 
 .next-step-card h3 {
   font-size: 1.35rem;
   color: var(--accent-gold);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
 }
 
 /* Explore Button */
 .explore-all {
   margin-top: 3rem;
-  text-align: left;
+  text-align: center;
+  
 }
 
 .explore-all .btn {
   padding: 0.75rem 1.5rem;
   background-color: var(--accent-cyan);
-  color: #111827;
+  color: white;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 14px rgba(34, 211, 238, 0.3);
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .explore-all .btn:hover {
-  background-color: #06b6d4; /* darker cyan */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+  background-color: var(--accent-blue-dark);
 }
+
 
 /*Witness Section*/
 #witness {
