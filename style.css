@@ -7,7 +7,7 @@
   --text-inverse: #1e293b;
 
   --primary-color: #3b82f6;
-  --accent-beige: #f5e0b7;  /* Champagne Beige */
+  --accent-beige: #f5e0b7;  
   --accent-pink: #f472b6;
   --accent-cyan: #22d3ee;
 
@@ -26,8 +26,8 @@ body.light-theme {
   --text-muted: #5c6f8c;
   --text-inverse: #ffffff;
 
-  --primary-color: #1e40af;         /* Deep navy */
-  --accent-beige: #f5e0b7;          /* Champagne Beige */
+  --primary-color: #1e40af;         
+  --accent-beige: #f5e0b7;          
   --accent-pink: #f472b6;
   --accent-cyan: #06b6d4;
 
@@ -35,7 +35,6 @@ body.light-theme {
   --btn-hover: #1e3a8a;
 }
 
-/* ========== Base ========== */
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +49,47 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ========== Navbar ========== */
+h1, h2 {
+  font-family: var(--font-primary);
+  color: var(--accent-gold);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  color: var(--accent-pink);
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  border-left: 4px solid var(--accent-gold);
+}
+
+/*Buttons*/
+.btn, .button-group a, button {
+  display: inline-block;
+  background-color: var(--accent-cyan);
+  color: #fff;
+  padding: 0.75rem 1.7rem;
+  margin: 0.5rem 0.5rem 1.2rem 0;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 600;
+}
+
+.btn:hover, .button-group a:hover, button:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/*  Navbar*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -63,28 +102,24 @@ nav {
   box-shadow: 0 2px 10px rgba(31, 41, 55, 0.5);
 }
 
-/* Left logo group (icon + text) */
 nav .brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-/* Cross logo image */
 nav .logo-icon {
   height: 82px;
   width: 92px;
   object-fit: contain;
 }
 
-/* Text next to logo */
 nav .logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
 
-/* Main title */
 nav .logo-title {
   font-family: var(--font-primary);
   font-size: 1.7rem;
@@ -93,15 +128,13 @@ nav .logo-title {
   font-weight: bold;
 }
 
-/* Subtitle under title */
 nav .logo-subtitle {
   font-size: 1.25rem;
-  color: lightgray;
+  color: rgb(124, 90, 247);
   font-style: italic;
   margin-top: 0.2rem;
 }
 
-/* Navigation links */
 nav ul {
   display: flex;
   list-style: none;
@@ -119,7 +152,6 @@ nav a:hover {
   color: var(--accent-cyan);
 }
 
-/* Theme toggle button */
 #theme-toggle {
   background-color: transparent;
   border: 2px solid var(--btn-bg);
@@ -129,31 +161,84 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* ========== Sections ========== */
-section {
-  padding: 5rem 2rem;
-  background-color: var(--bg-color);
-  border-top: 1px solid #1f2c3d;
+/* Home */
+.home {
+  background: linear-gradient(
+    rgba(13, 17, 23, 0.85),
+    rgba(13, 17, 23, 0.85)
+  );
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: var(--text-color);
 }
 
-section:nth-of-type(even) {
-  background-color: var(--section-bg);
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row-reverse;
 }
 
-h1, h2 {
+.home .text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--accent-cyan);
+}
+
+.home .text h1 {
   font-family: var(--font-primary);
-  color: var(--accent-gold);
   font-size: 2.5rem;
+  color: var(--accent-gold);
   margin-bottom: 1rem;
 }
 
-h3.accordion-title {
-  font-size: 1.4rem;
-  margin: 1.2rem 0;
-  color: var(--primary-color);
-  cursor: pointer;
+.home .text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--accent-cyan);
+  margin-bottom: 1.5rem;
 }
-/* ========== Gospel Section ========== */
+
+.home .image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.home .image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home .text {
+    text-align: center;
+  }
+
+  .home .image {
+    margin-top: 2rem;
+  }
+}
+/* Gospel Section */
 #gospel {
   padding: 5rem 2rem;
   background-color: var(--section-bg);
@@ -161,7 +246,7 @@ h3.accordion-title {
 }
 
 #gospel h2 {
-  color: var(--accent-gold);
+  color:#06b6d4;
   font-family: var(--font-primary);
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -235,149 +320,6 @@ h3.accordion-title {
   justify-content: center;
 }
 
-/* Home */
-.home {
-  background: linear-gradient(
-      rgba(13, 17, 23, 0.85),
-      rgba(13, 17, 23, 0.85)
-    ),
-    url('./images/thelight.jpg') no-repeat center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-  padding: 6rem 2rem;
-  text-align: center;
-  color: var(--text-color);
-}
-
-.home .text {
-  flex: 1 1 400px;
-  max-width: 600px;
-  margin: 0 auto;
-  color: var(--accent-cyan);
-}
-
-.home .image {
-  flex: 1 1 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.home .image img {
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-}
-.home {
-  background: linear-gradient(
-      rgba(13, 17, 23, 0.85),
-      rgba(13, 17, 23, 0.85)
-    ),
-    url('./images/sunset-bg.jpg') no-repeat center center;
-  background-size: cover;
-  color: var(--text-color);
-  padding: 6rem 2rem;
-}
-
-.home-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-direction: row-reverse; 
-}
-
-
-.home .text {
-  flex: 1 1 500px;
-  color: var(--accent-cyan);
-}
-
-.home .text h1 {
-  font-family: var(--font-primary);
-  font-size: 2.5rem;
-  color: var(--accent-gold);
-  margin-bottom: 1rem;
-}
-
-.home .text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--accent-cyan);
-  margin-bottom: 1.5rem;
-}
-
-.home .image {
-  flex: 1 1 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.home .image img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 1rem;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .home-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home .text {
-    text-align: center;
-  }
-
-  .home .image {
-    margin-top: 2rem;
-  }
-}
-
-/*Paragraphs & Blockquotes */
-p {
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-}
-
-blockquote {
-  font-style: italic;
-  color: var(--accent-pink);
-  margin: 1rem 0;
-  padding-left: 1.2rem;
-  border-left: 4px solid var(--accent-gold);
-}
-
-/*Buttons*/
-.btn, .button-group a, button {
-  display: inline-block;
-  background-color: var(--accent-cyan);
-  color: #fff;
-  padding: 0.75rem 1.7rem;
-  margin: 0.5rem 0.5rem 1.2rem 0;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
-  font-weight: 600;
-}
-
-.btn:hover, .button-group a:hover, button:hover {
-  background-color: var(--btn-hover);
-  transform: translateY(-2px);
-  cursor: pointer;
-}
-
 /* What’s Next Section */
 #whats-next {
   padding: 5rem 2rem;
@@ -385,7 +327,7 @@ blockquote {
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 #whats-next h2 {
@@ -399,7 +341,8 @@ blockquote {
   line-height: 1.7;
   color: var(--text-color);
   max-width: 800px;
-  margin-bottom: 0.75rem;
+  margin: auto;
+  text-align: center;
 }
 
 /* Grid for Steps */
@@ -472,13 +415,13 @@ blockquote {
 /*Witness Section*/
 #witness {
   background-color: var(--section-bg);
-  padding: 5rem 2rem; /* or reduce if you want tighter spacing */
-  max-width: none;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
+#witness h2 {
+  color: var(--accent-cyan);
+}
 
 .witness-header {
   display: flex;
@@ -488,33 +431,15 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
-.witness-header i {
-  font-size: 1.75rem;
-  color: var(--accent-blue);
-}
-
-.witness-header h2 {
-  font-family: var(--font-primary);
-  font-size: 2.25rem;
-  color: var(--accent-gold);
-  margin: 0;
-}
-
-#witness p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-color);
-  margin-bottom: 1.2rem;
-}
-
 .bible-verse {
   font-style: italic;
   color: var(--accent-pink);
   border-left: 4px solid var(--accent-gold);
   padding-left: 1rem;
-  margin: 2rem 0;
-  text-align: left;
+  margin: 2rem auto;
   font-size: 1rem;
+  text-align: center;
+  max-width: 700px;
 }
 
 .verse-ref {
@@ -523,7 +448,7 @@ blockquote {
   font-weight: bold;
   display: block;
   margin-top: 0.2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .button-group {
@@ -533,7 +458,6 @@ blockquote {
   justify-content: center;
   margin-top: 2rem;
 }
-
 
 /* Connect Section */
 #connect {
@@ -546,19 +470,19 @@ blockquote {
 #connect h2 {
   font-size: 2.25rem;
   margin-bottom: 1rem;
-  color: var(--accent-gold); /* themed */
+  color: cyan;
 }
 
 #connect p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: var(--text-color); /* themed */
+  color: var(--text-color); 
 }
 
 #connect form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* spacing between form-groups */
+  gap: 1.5rem; 
   text-align: left;
 }
 
@@ -591,6 +515,18 @@ blockquote {
   outline: 2px solid var(--accent-gold);
   background-color: var(--input-focus-bg, #374151);
 }
+
+/* Sections*/
+section {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color);
+  border-top: 1px solid #1f2c3d;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--section-bg);
+}
+
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
