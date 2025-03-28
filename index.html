@@ -8,108 +8,108 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div id="progress-bar"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
 
   <!-- Navbar -->
-<nav>
-  <div class="brand">
-    <img src="./images/cross.jpg" alt="Cross Logo" class="logo-icon" />
-    <div class="logo-text">
-      <div class="logo-title">Your Faith Journey</div>
-      <div class="logo-subtitle"><em>Encounter Jesus; Embrace The Mission</em></div>
-    </div>
-  </div>
-
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#gospel">The Gospel</a></li>
-    <li><a href="#whats-next">What’s Next?</a></li>
-    <li><a href="#witness">Bear Witness</a></li>
-    <li><a href="#connect">Connect</a></li>
-  </ul>
-
-  <button id="theme-toggle" class="btn">🌓 Theme </button>
-</nav>
-
-
- <!-- Home Section -->
- <section id="home" class="home">
-  <div class="home-content">
-    <div class="text">
-      <h1>From Darkness to Light</h1>
-      <blockquote>
-        “He has rescued us from the kingdom of darkness and transferred us into the Kingdom of His dear Son.”<br />
-        <small>— Colossians 1:13 (NLT)</small>
-      </blockquote>
-      <p>
-        You don’t have to stay lost.<br />
-        Jesus is reaching out with love, hope, and purpose.
-        <br /><br />
-        Whether you're just curious or you’re ready for a fresh start, this space is made for you.
-        You're not alone. And you were never meant to walk this road by yourself.
-      </p>
-      <div class="cta-buttons">
-        <a href="#gospel" class="btn">Take the First Step</a>
-        <a href="#whats-next" class="btn secondary">I'm Born Again</a>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./images/cross.jpg" alt="Cross Logo" class="logo-icon" />
+      <div class="logo-text">
+        <div class="logo-title">Your Faith Journey</div>
+        <div class="logo-subtitle"><em>Encounter Jesus; Embrace The Mission</em></div>
       </div>
     </div>
-    <div class="image">
-      <img src="./images/TheInvitation.jpg" alt="A hand reaching out in invitation" />
-    </div>
-  </div>
-</section>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gospel">The Gospel</a></li>
+      <li><a href="#whats-next">What’s Next?</a></li>
+      <li><a href="#witness">Bear Witness</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button id="theme-toggle" class="btn">🌓 Theme</button>
+  </nav>
 
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-content">
+      <div class="text">
+        <h1 id="typing-heading"></h1>
+        <blockquote>
+          “He has rescued us from the kingdom of darkness and transferred us into the Kingdom of His dear Son.”<br />
+          <small>— Colossians 1:13 (NLT)</small>
+        </blockquote>
+        <p>
+          You don’t have to stay lost.<br />
+          Jesus is reaching out with love, hope, and purpose.
+          <br /><br />
+          Whether you're just curious or you’re ready for a fresh start, this space is made for you.
+          You're not alone. And you were never meant to walk this road by yourself.
+        </p>
+        <div class="cta-buttons">
+          <a href="#gospel" class="btn">Take the First Step</a>
+          <a href="#whats-next" class="btn secondary">I'm Born Again</a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="./images/TheInvitation.jpg" alt="A hand reaching out in invitation" />
+      </div>
+    </div>
+  </section>
 
   <!-- Gospel Section -->
-<section id="gospel" class="gospel">
-  <h2>The Good News</h2>
+  <section id="gospel" class="gospel">
+    <h2>The Good News</h2>
 
-  <div class="gospel-intro">
-    <p>
-      The world is broken, but there’s hope. God didn’t leave us in the dark. 
-      Out of deep love, He sent Jesus — fully God and fully human — to rescue us.
-    </p>
-    <p>
-      Jesus lived the life we never could, died to take our place, and rose again 
-      to give us new life. In Him, we are forgiven, restored, and made new.
-    </p>
-  </div>
+    <div class="gospel-intro">
+      <p>
+        The world is broken, but there’s hope. God didn’t leave us in the dark. 
+        Out of deep love, He sent Jesus; fully God and fully human; to rescue us.
+      </p>
+      <p>
+        Jesus lived the life we never could, died to take our place, and rose again 
+        to give us new life. In Him, we are forgiven, restored, and made new.
+      </p>
+    </div>
 
-  <div class="gospel-cards">
-    <div class="card">
-      <h3>The Fall</h3>
-      <p>"For all have sinned and fall short of the glory of God." ~ Romans 3:23</p>
+    <div class="gospel-cards">
+      <div class="card">
+        <h3>The Fall</h3>
+        <p>"For all have sinned and fall short of the glory of God." ~ Romans 3:23</p>
+      </div>
+      <div class="card">
+        <h3>Separation</h3>
+        <p>"Your sins have separated you from your God." ~ Isaiah 59:2</p>
+      </div>
+      <div class="card">
+        <h3>Love</h3>
+        <p>"But God shows His love for us in that while we were still sinners, Christ died for us." — Romans 5:8</p>
+      </div>
+      <div class="card">
+        <h3>Sacrifice</h3>
+        <p>"He himself bore our sins in his body on the cross..." ~ 1 Peter 2:24</p>
+      </div>
+      <div class="card">
+        <h3>New Life</h3>
+        <p>"If anyone is in Christ, he is a new creation." ~ 2 Corinthians 5:17</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Separation</h3>
-      <p>"Your sins have separated you from your God." ~ Isaiah 59:2</p>
+    <p class="gospel-cta-text">There’s more to this story...and it’s personal.</p>
+    <div class="cta-buttons">
+      <a href="#decision" class="btn">Let's gooo🤩</a>
     </div>
-    <div class="card">
-      <h3>Love</h3>
-      <p>"But God shows His love for us in that while we were still sinners, Christ died for us." — Romans 5:8</p>
-    </div>
-    <div class="card">
-      <h3>Sacrifice</h3>
-      <p>"He himself bore our sins in his body on the cross..." ~ 1 Peter 2:24</p>
-    </div>
-    <div class="card">
-      <h3>New Life</h3>
-      <p>"If anyone is in Christ, he is a new creation." ~ 2 Corinthians 5:17</p>
-    </div>
-  </div>
-  <p class="gospel-cta-text">There’s more to this story...and it’s personal.</p>
-  <div class="cta-buttons">
-    <a href="#decision" class="btn">Let's gooo🤩</a>
-  </div>
-</section>
-
+  </section>
 
   <!-- What’s Next Section -->
-<section id="whats-next">
+  <section id="whats-next">
     <h2>What’s Next?</h2>
     <p>Welcome to the Narrow Path</p>
     <p>
-      Congratulations on receiving eternal life! You’ve entered the narrow path—a journey with Jesus that leads to real life.
+      Congratulations on receiving eternal life! You’ve entered the narrow path; a journey with Jesus that leads to real life.
       This path isn’t about rules or religion, but a relationship. Let’s walk it together, step by step:
     </p>
   
@@ -141,42 +141,41 @@
       <a class="btn" href="/next-steps">Explore All</a>
     </div>
   </section>
-  
- <!-- Bear Witness Section -->
-<section id="witness">
-  <h2><span class="highlight-gold">Bear Witness</span></h2>
 
-  <p>
-    You’ve said yes to Jesus; you’re born again! But that’s just the beginning.
-    You’re called to grow in your spiritual maturity through intimacy with God.    
-    <a href="#whats-next" class="inline-link">See how above</a>
-    
-  </p>
- <p>
-    When the Holy Spirit comes upon us, it’s not just for comfort but for boldness.  
-    You were empowered for a purpose: to share Jesus with the world.
-  </p>
+  <!-- Bear Witness Section -->
+  <section id="witness">
+    <h2><span class="highlight-gold">Bear Witness</span></h2>
 
-  <blockquote class="bible-verse">
-    <strong>
-      “But you will receive power when the Holy Spirit comes upon you.  
-      And you will be my witnesses… to the ends of the earth.”
-    </strong><br/>
-    <span class="verse-ref"> ~ Acts 1:8</span>
-  </blockquote>
+    <p>
+      You’ve said yes to Jesus; you’re born again! But that’s just the beginning.
+      You’re called to grow in your spiritual maturity through intimacy with God.    
+      <a href="#whats-next" class="inline-link">See how above</a>
+    </p>
+    <p>
+      When the Holy Spirit comes upon us, it’s not just for comfort but for boldness.  
+      You were empowered for a purpose: to share Jesus with the world.
+    </p>
 
-  <p>
-    This is the Great Commission; a direct command from Jesus to every believer.
-    You’ve experienced the transforming power of God. Now you carry the hope the world desperately needs.
-    <br/>
-    This part of your journey will show you how to overcome fear, where to begin, and how to get equipped for greater works and missions.
-  </p>
+    <blockquote class="bible-verse">
+      <strong>
+        “But you will receive power when the Holy Spirit comes upon you.  
+        And you will be my witnesses… to the ends of the earth.”
+      </strong><br/>
+      <span class="verse-ref"> ~ Acts 1:8</span>
+    </blockquote>
 
-  <div class="button-group">
-    <a href="/great-commission" class="btn">The Great Commission</a>
-    <a href="/why-witness" class="btn">Why Must I Witness?</a>
-  </div>
-</section>
+    <p>
+      This is the Great Commission; a direct command from Jesus to every believer.
+      You’ve experienced the transforming power of God. Now you carry the hope the world desperately needs.
+      <br/>
+      This part of your journey will show you how to overcome fear, where to begin, and how to get equipped for greater works and missions.
+    </p>
+
+    <div class="button-group">
+      <a href="/great-commission" class="btn">The Great Commission</a>
+      <a href="/why-witness" class="btn">Why Must I Witness?</a>
+    </div>
+  </section>
 
   <!-- Connect Section -->
   <section id="connect">
@@ -198,14 +197,32 @@
     
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+        <textarea id="message" name="message"></textarea>
       </div>
     
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send</button>
     </form>
-    
   </section>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-message">“They that know their God shall be strong and do exploits..</p>
+      
+      <ul class="footer-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gospel">Gospel</a></li>
+        <li><a href="#whats-next">Next Steps</a></li>
+        <li><a href="#witness">Witness</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+  
+      <a href="#home" class="back-to-top">↑ Back to Top</a>
+  
+      <p class="footer-note">© 2025 Your Faith Journey. Crafted in love, led by grace for every seeker, saint, and servant.
 
+      </p>
+    </div>
+  </footer>
+  
   <script src="./script.js"></script>
 </body>
 </html>
