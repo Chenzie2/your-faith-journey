@@ -61,12 +61,12 @@ Both themes are designed with accessibility and clarity in mind.
 
 ---
 
-### 🔗 Live Preview:
+### Live Preview:
 [View on GitHub Pages](https://your-username.github.io/your-faith-journey)
 
 ---
 
-## 📄 Copyright & License
+## Copyright & License
 
 © 2025 [Grace Zawadi]  
 Licensed under the [MIT License](LICENSE)
