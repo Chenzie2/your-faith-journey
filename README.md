@@ -1,6 +1,6 @@
-# ✝️YOUR FAITH JOURNEY💛
+# YOUR FAITH JOURNEY
 
-Author: [Grace Zawadi]
+Author: Grace Zawadi  
 Type: Frontend Web Application (HTML/CSS/JavaScript)
 
 ---
@@ -12,40 +12,46 @@ Your Faith Journey is a responsive, single-page web experience designed to suppo
 ---
 
 ## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- JSON Server (with local db.json)
-- Google Fonts(Lora) 
+
+- HTML  
+- CSS  
+- JavaScript  
+- JSON Server (with local `db.json`)  
+- Google Fonts (Lora)  
 
 ---
 
 ## Features & Functionality
 
 ### Responsive Design
-- Mobile-first design using media queries
-- Seamless experience across devices
+
+- Mobile-first design using media queries  
+- Seamless experience across devices  
 
 ### Smooth Scrolling & Navigation
-- Sticky navigation bar
-- Scroll progress indicator
-- Section-based anchor links
+
+- Sticky navigation bar  
+- Scroll progress indicator  
+- Section-based anchor links  
 
 ### Light/Dark Theme Toggle
-- Toggle between light and dark modes
-- Preferences saved during browsing session
+
+- Toggle between light and dark modes  
+- Preferences saved during browsing session  
 
 ### Structured Sections
+
 - **Home** – Introduction with Scripture and call-to-action buttons  
 - **The Gospel** – Core message of the Christian faith using content cards  
 - **What’s Next?** – Outlines prayer, baptism, and joining a faith community  
 - **Bear Witness** – Encourages personal evangelism with strong CTAs  
-- **Connect** – Contact form with name, email, and message fields
+- **Connect** – Contact form with name, email, and message fields  
 
 ### UI and Design
+
 - Calming, faith-inspired color palette  
 - Google Fonts for elegant, readable typography  
-- Clean layout with intuitive visual hierarchy
+- Clean layout with intuitive visual hierarchy  
 
 ---
 
@@ -53,24 +59,31 @@ Your Faith Journey is a responsive, single-page web experience designed to suppo
 
 The themes are crafted to reflect different spiritual tones:
 
-- **Dark Theme**: Uses deep navy and slate tones to create a peaceful, reflective atmosphere for nighttime or quiet moments.  
-- **Light Theme**: Warm cream tones and crimson accents symbolize joy, renewal, and celebration.  
-- **Typography**: Lora is used for its classic yet inviting serif style, enhancing readability while reinforcing timeless truths.
+- **Dark Theme**: Deep navy and slate tones for a peaceful, reflective atmosphere  
+- **Light Theme**: Warm cream and crimson tones symbolizing joy, renewal, and celebration  
+- **Typography**: Lora’s classic serif enhances readability while reinforcing timeless truths  
 
-Both themes are designed with accessibility and clarity in mind.
+Both themes prioritize clarity, balance, and accessibility across all devices.
 
 ---
+
 ## Setup Instructions
 
 To run the application locally:
 
-Clone the repository:
+1. Clone the repository:
+   git clone git@github.com:Chenzie2/your-faith-journey.git
 
-```bash
-git clone https://github.com/your-username/your-faith-journey.git
-cd your-faith-journey
+2. Open index.html in your browser to explore the app.
+
+3. To enable contact functionality using JSON Server:
+   npm install -g json-server
+   json-server --watch db.json
+
+--- 
+## License
+This project is licensed for personal and educational use. For reuse or collaboration, please contact the author.
 
 
-## Copyright
 
-© 2025 [Grace Zawadi]  
+
