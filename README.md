@@ -59,6 +59,18 @@ The themes are crafted to reflect different spiritual tones:
 
 Both themes are designed with accessibility and clarity in mind.
 
+---
+## Setup Instructions
+
+To run the application locally:
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-faith-journey.git
+cd your-faith-journey
+
+
 ## Copyright
 
 © 2025 [Grace Zawadi]  

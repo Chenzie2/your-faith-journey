@@ -1,12 +1,62 @@
 {
-    "whatsNext": [
-      { "title": "🙏 PRAYER" },
-      { "title": "🌊 WATER BAPTISM" },
-      { "title": "🔥HOLY GHOST BAPTISM" },
-      { "title": "📖 THE WORD" },
-      { "title": "🌱COMMUNITY" },
-      { "title": "❤️ LOVING GOD" },
-      { "title": "✨ A REVELATION" }
-    ]
-  }
-  
+  "whatsNext": [
+    {
+      "title": "🙏 PRAYER"
+    },
+    {
+      "title": "🌊 WATER BAPTISM"
+    },
+    {
+      "title": "🔥HOLY GHOST BAPTISM"
+    },
+    {
+      "title": "📖 THE WORD"
+    },
+    {
+      "title": "🌱COMMUNITY"
+    },
+    {
+      "title": "❤️ LOVING GOD"
+    },
+    {
+      "title": "✨ A REVELATION"
+    }
+  ],
+  "messages": [
+    {
+      "name": "Grace Zawadi",
+      "email": "gzawie24@gmail.com",
+      "message": "Hi I need help finding a local church",
+      "date": "2025-03-28T14:12:38.311Z",
+      "id": 1
+    },
+    {
+      "name": "Grace Zawadi",
+      "email": "gzawie24@gmail.com",
+      "message": "Hi I would love to join a local church",
+      "date": "2025-03-28T14:40:38.745Z",
+      "id": 2
+    },
+    {
+      "name": "Grace Zawadi",
+      "email": "gzawie24@gmail.com",
+      "message": "Hi I would like to find a local church",
+      "date": "2025-03-28T15:19:04.929Z",
+      "id": 3
+    },
+    {
+      "name": "Grace Zawadi",
+      "email": "gzawie24@gmail.com",
+      "message": "I would love to find a local church",
+      "date": "2025-03-28T15:26:27.695Z",
+      "id": 4
+    },
+    {
+      "name": "Grace Zawadi",
+      "email": "gzawie24@gmail.com",
+      "message": "I would love to get help finding a local church",
+      "date": "2025-03-28T16:06:01.589Z",
+      "id": 5
+    }
+  ]
+}

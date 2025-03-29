@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  const menuToggle = document.querySelector(".menu-toggle");
 
   // Typing animation
   const heading = document.querySelector("#home h1");
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   type();
 
-  // Theme handling
+  // Theme toggle
   if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-theme");
   }
@@ -25,11 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle("light-theme");
     const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
     localStorage.setItem("theme", theme);
-  });
-
-  // Menu toggle for mobile
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
   });
 
   // Scroll progress bar
@@ -40,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("progress-bar").style.width = `${progress}%`;
   });
 
-  // Reveal animation for gospel cards
+  // Reveal cards
   const cards = document.querySelectorAll(".card");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -51,7 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   cards.forEach(card => observer.observe(card));
 
-  // Fetch data for "What's Next" cards
+  // Hide navbar on scroll down, show on scroll up
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down
+    navbar.classList.add("hide");
+  } else {
+    // Scrolling up
+    navbar.classList.remove("hide");
+  }
+  lastScrollY = window.scrollY;
+});
+
+  // What's Next cards from JSON
   fetch("http://localhost:3000/whatsNext")
     .then(res => res.json())
     .then(data => {
@@ -77,4 +85,53 @@ document.addEventListener("DOMContentLoaded", () => {
         <p style="color: var(--accent-pink);">Oops! Couldn't load content. Try refreshing or check your connection.</p>
       `;
     });
+
+  // FORM: Validation + JSON submission
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const message = contactForm.message.value.trim();
+
+    // Basic validation
+    if (!name || !email || !message) {
+      formStatus.textContent = "Please fill in all required fields.";
+      formStatus.style.color = "crimson";
+      return;
+    }
+
+    // Email pattern check
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!emailPattern.test(email)) {
+      formStatus.textContent = "Please enter a valid email address.";
+      formStatus.style.color = "crimson";
+      return;
+    }
+
+    // Submit to JSON Server
+    try {
+      const response = await fetch("http://localhost:3000/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message, date: new Date().toISOString() })
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "Message sent successfully! We'll be in touch.";
+        formStatus.style.color = "green";
+        contactForm.reset();
+      } else {
+        throw new Error("Network error");
+      }
+    } catch (err) {
+      formStatus.textContent = "Oops! Something went wrong. Please try again later.";
+      formStatus.style.color = "crimson";
+    }
+  });
 });
