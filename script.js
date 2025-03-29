@@ -86,7 +86,7 @@ window.addEventListener("scroll", () => {
       `;
     });
 
-  // FORM: Validation + JSON submission
+  // Form Validation
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
 
@@ -108,7 +108,7 @@ window.addEventListener("scroll", () => {
     const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     if (!emailPattern.test(email)) {
       formStatus.textContent = "Please enter a valid email address.";
-      formStatus.style.color = "crimson";
+      formStatus.style.color = "red";
       return;
     }
 
@@ -123,7 +123,7 @@ window.addEventListener("scroll", () => {
       });
 
       if (response.ok) {
-        formStatus.textContent = "Message sent successfully! We'll be in touch.";
+        formStatus.textContent = "Message sent successfully! We'll be in touch soon.";
         formStatus.style.color = "green";
         contactForm.reset();
       } else {
@@ -131,7 +131,7 @@ window.addEventListener("scroll", () => {
       }
     } catch (err) {
       formStatus.textContent = "Oops! Something went wrong. Please try again later.";
-      formStatus.style.color = "crimson";
+      formStatus.style.color = "red";
     }
   });
 });

@@ -1,5 +1,4 @@
 /* Dark theme */
-/* Dark theme */
 :root {
   --bg-color: #0d1117;
   --section-bg: #161b22;
@@ -17,8 +16,6 @@
   --font-secondary: 'Helvetica Neue', sans-serif;
 }
 
-
-/* Light theme */
 /* Light theme */
 body.light-theme {
   --bg-color: #f5eacd;               
@@ -137,8 +134,8 @@ blockquote {
 }
 
 .navbar .logo-icon {
-  height: 60px;  /* Reduced */
-  width: 70px;   /* Reduced */
+  height: 60px;  
+  width: 70px;   
   object-fit: contain;
 }
 
@@ -150,14 +147,14 @@ blockquote {
 
 .navbar .logo-title {
   font-family: var(--font-primary);
-  font-size: 1.85rem;  /* Increased */
+  font-size: 1.65rem;  
   color: var(--accent-cyan);
   letter-spacing: 1px;
   font-weight: bold;
 }
 
 .navbar .logo-subtitle {
-  font-size: 1.35rem;  
+  font-size: 1.25rem;  
   color: rgb(26, 39, 216);
   font-style: italic;
   margin-top: 0.2rem;
@@ -167,7 +164,7 @@ blockquote {
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 1.25rem; 
+  gap: 1.45rem; 
   flex-wrap: wrap;
 }
 
@@ -175,7 +172,7 @@ blockquote {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.05rem; 
+  font-size: 1.15rem; 
   transition: color 0.3s;
 }
 
@@ -215,7 +212,7 @@ blockquote {
 
 /* Home */
 .home {
-  background-color: var(--section-bg);
+  background-color: var(--bg-color);;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -407,7 +404,7 @@ blockquote {
 /* What’s Next Section */
 #whats-next {
   padding: 5rem 2rem;
-  background-color: var(--bg-color);  /* Now dark navy */
+  background-color: var(--bg-color);  
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
@@ -548,7 +545,7 @@ blockquote {
 
 /* Connect Section */
 #connect {
-  padding: 5rem 2rem;
+  padding: 3.5rem 2rem;
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
