@@ -11,6 +11,18 @@ Your Faith Journey is a responsive, single-page web experience designed to suppo
 
 ---
 
+## Preview
+![alt text](images/darktheme.png)
+![alt text](images/lighttheme.png)
+
+![alt text](images/cards.png)
+![alt text](images/grid.png)
+
+![alt text](images/mobile.png)
+![alt text](images/form.png)
+
+---
+
 ## Tech Stack
 
 - HTML  
@@ -20,6 +32,7 @@ Your Faith Journey is a responsive, single-page web experience designed to suppo
 - Google Fonts (Lora)  
 
 ---
+
 
 ## Features & Functionality
 
@@ -72,7 +85,7 @@ Both themes prioritize clarity, balance, and accessibility across all devices.
 To run the application locally:
 
 1. Clone the repository:
-   git clone git@github.com:Chenzie2/your-faith-journey.git
+   git clone [](https://github.com/Chenzie2/your-faith-journey)
 
 2. Open index.html in your browser to explore the app.
 
