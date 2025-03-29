@@ -12,14 +12,14 @@ Your Faith Journey is a responsive, single-page web experience designed to suppo
 ---
 
 ## Preview
-![alt text](images/darktheme.png)
-![alt text](images/lighttheme.jpg)
+![Dark Theme](images/darktheme.png)
+![Light Theme](images/lighttheme.png)
 
-![alt text](images/cards.png)
-![alt text](images/grid.jpg)
+![Cards](images/cards.png)
+![Grid](images/grid.png)
 
-![alt text](images/mobile.png)
-![alt text](images/form.png)
+![Responsiveness](images/mobile.png)
+![Form](images/form.png)
 
 ---
 
