@@ -60,14 +60,24 @@ window.addEventListener("scroll", () => {
 });
 
   // What's Next cards from JSON
+    // What's Next cards from JSON
   fetch("http://localhost:3000/whatsNext")
     .then(res => res.json())
     .then(data => {
-      const cards = document.querySelectorAll(".next-step-card");
-      cards.forEach((card, i) => {
-        const item = data[i];
-        const overlay = card.querySelector(".overlay");
+      const container = document.getElementById("whats-next-cards");
+      container.innerHTML = ""; // Clear any pre-existing cards
+
+      data.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("next-step-card");
+        card.style.backgroundImage = `url('${item.image}')`;
+
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
         overlay.innerHTML = `<h3>${item.title}</h3>`;
+
+        card.appendChild(overlay);
+
         card.addEventListener("click", () => {
           const slug = item.title
             .replace(/[^\w\s]/gi, "")
@@ -76,8 +86,11 @@ window.addEventListener("scroll", () => {
             .replace(/\s+/g, "-");
           window.location.href = `/next-steps#${slug}`;
         });
+
         card.setAttribute("tabindex", "0");
         card.setAttribute("role", "link");
+
+        container.appendChild(card);
       });
     })
     .catch(() => {
@@ -85,6 +98,7 @@ window.addEventListener("scroll", () => {
         <p style="color: var(--accent-pink);">Oops! Couldn't load content. Try refreshing or check your connection.</p>
       `;
     });
+
 
   // Form Validation
   const contactForm = document.getElementById("contactForm");

@@ -14,25 +14,24 @@
     <div id="progress-bar"></div>
   </div>
 
- <!-- Navbar -->
-<nav class="navbar">
-  <div class="brand">
-    <img src="./images/cross.jpg" alt="Cross Logo" class="logo-icon" />
-    <div class="logo-text">
-      <div class="logo-title">Your Faith Journey</div>
-      <div class="logo-subtitle"><em>Encounter Jesus; Embrace The Mission</em></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./images/cross.jpg" alt="Cross Logo" class="logo-icon" />
+      <div class="logo-text">
+        <div class="logo-title">Your Faith Journey</div>
+        <div class="logo-subtitle"><em>Encounter Jesus; Embrace The Mission</em></div>
+      </div>
     </div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#gospel">The Gospel</a></li>
-    <li><a href="#whats-next">What’s Next?</a></li>
-    <li><a href="#witness">Bear Witness</a></li>
-    <li><a href="#connect">Connect</a></li>
-  </ul>
-  <button id="theme-toggle" class="btn">🌓 Theme</button>
-</nav>
-
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gospel">The Gospel</a></li>
+      <li><a href="#whats-next">What’s Next?</a></li>
+      <li><a href="#witness">Bear Witness</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button id="theme-toggle" class="btn">🌓 Theme</button>
+  </nav>
 
   <!-- Home Section -->
   <section id="home" class="home">
@@ -112,40 +111,19 @@
       Congratulations on receiving eternal life! You’ve entered the narrow path; a journey with Jesus that leads to real life.
       This path isn’t about rules or religion, but a relationship. Let’s walk it together, step by step:
     </p>
-  
+
     <div id="whats-next-cards" class="card-grid">
-      <div class="next-step-card" style="background-image: url('./images/prayer.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/waterbaptsim.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/HolyGhostbaptism.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/bible.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/community.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/lovingYou.jpg')">
-        <div class="overlay"></div>
-      </div>
-      <div class="next-step-card" style="background-image: url('./images/leadingMe.jpg')">
-        <div class="overlay"></div>
-      </div>
+      <!-- Cards will be dynamically inserted here by JavaScript -->
     </div>
-    
+
     <div class="explore-all">
       <button class="btn" type="button">Explore All</button>
-</div>
+    </div>
   </section>
 
   <!-- Bear Witness Section -->
   <section id="witness">
     <h2><span class="highlight-gold">Bear Witness</span></h2>
-
     <p>
       You’ve said yes to Jesus; you’re born again! That's just the start.
     </p>
@@ -161,7 +139,8 @@
     <p>
       This is the Great Commission; a direct command from Jesus to every believer.
       <br/>
-      This part of your journey shows you how to overcome limitations and equips you for greater works and missions.</p>
+      This part of your journey shows you how to overcome limitations and equips you for greater works and missions.
+    </p>
 
     <div class="button-group">
       <button class="btn" type="button">The Great Commission</button>
@@ -170,34 +149,35 @@
   </section>
 
   <!-- Connect Section -->
-<section id="connect">
-  <h2>Let’s Connect</h2>
-  <p>
-    Got questions? Want to talk, pray with someone<br />
-    or in search of a community? We got you!
-  </p>
+  <section id="connect">
+    <h2>Let’s Connect</h2>
+    <p>
+      Got questions? Want to talk, pray with someone<br />
+      or in search of a community? We got you!
+    </p>
 
-  <form id="contactForm" novalidate>
-    <div class="form-group">
-      <label for="name">Name:<span aria-hidden="true">*</span></label>
-      <input type="text" id="name" name="name" placeholder="Your full name" />
-    </div>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name:<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Your full name" />
+      </div>
 
-    <div class="form-group">
-      <label for="email">Email:<span aria-hidden="true">*</span></label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" />
-    </div>
+      <div class="form-group">
+        <label for="email">Email:<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" />
+      </div>
 
-    <div class="form-group">
-      <label for="message">Message:<span aria-hidden="true">*</span></label>
-      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
-    </div>
+      <div class="form-group">
+        <label for="message">Message:<span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+      </div>
 
-    <button type="submit" class="btn">Send Message</button>
-    <p id="formStatus" role="status" style="margin-top: 1rem;"></p>
-  </form>
-</section>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formStatus" role="status" style="margin-top: 1rem;"></p>
+    </form>
+  </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <p class="footer-message">“They that know their God shall be strong and do exploits.."</p>
@@ -209,15 +189,14 @@
         <li><a href="#witness">Witness</a></li>
         <li><a href="#connect">Connect</a></li>
       </ul>
-  
-      <a href="#home" class="back-to-top">↑ Back to Top</a>
-  
-      <p class="footer-note">© 2025 Your Faith Journey. Crafted in love, led by grace for every seeker, saint, and servant.
 
-      </p>
+      <a href="#home" class="back-to-top">↑ Back to Top</a>
+
+      <p class="footer-note">© 2025 Your Faith Journey. Crafted in love, led by grace for every seeker, saint, and servant.</p>
     </div>
   </footer>
-  
+
+  <!-- JavaScript -->
   <script src="./script.js"></script>
 </body>
 </html>

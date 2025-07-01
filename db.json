@@ -1,27 +1,33 @@
 {
   "whatsNext": [
     {
-      "title": "PRAYER"
+      "title": "PRAYER",
+      "image": "./images/prayer.jpg"
     },
     {
-      "title": "WATER BAPTISM"
+      "title": "WATER BAPTISM",
+      "image": "./images/waterbaptsim.jpg"
     },
     {
-      "title": "HOLY GHOST BAPTISM"
+      "title": "HOLY GHOST BAPTISM",
+      "image": "./images/HolyGhostbaptism.jpg"
     },
     {
-      "title": "THE WORD"
+      "title": "THE WORD",
+      "image": "./images/bible.jpg"
     },
     {
-      "title": "COMMUNITY"
+      "title": "COMMUNITY",
+      "image": "./images/community.jpg"
     },
     {
-      "title": "LOVING GOD"
+      "title": "LOVING GOD",
+      "image": "./images/lovingYou.jpg"
     },
     {
-      "title": "A REVELATION"
+      "title": "A REVELATION",
+      "image": "./images/leadingMe.jpg"
     }
   ],
   "messages": []
 }
-    
